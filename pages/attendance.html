@@ -1,11 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>StudentHub Portal - Attendance</title>
 </head>
 <body>
-    
+
+    <h1 align="center">StudentHub Portal</h1>
+    <hr>
+
+    <h2>Student Attendance</h2>
+
+    <form>
+
+        <label>Student Name:</label><br>
+        <input type="text" name="name"><br><br>
+
+        <label>Enrollment Number:</label><br>
+        <input type="text" name="enrollment"><br><br>
+
+        <label>Date:</label><br>
+        <input type="date" name="date"><br><br>
+
+        <label>Subject:</label><br>
+        <select name="subject">
+            <option>Web Development</option>
+            <option>Programming in C++</option>
+            <option>Data Structures</option>
+            <option>Digital Electronics</option>
+            <option>Mathematics</option>
+        </select><br><br>
+
+        <label>Attendance:</label><br>
+        <input type="radio" name="attendance" value="Present"> Present
+        <input type="radio" name="attendance" value="Absent"> Absent
+        <br><br>
+
+        <input type="submit" value="Submit Attendance">
+        <input type="reset" value="Clear">
+
+    </form>
+
 </body>
 </html>
