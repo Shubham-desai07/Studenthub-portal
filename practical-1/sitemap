@@ -1,0 +1,44 @@
+# StudentHub Portal — Sitemap
+
+HOME
+│
+├── About
+├── Contact
+├── Login
+└── Register
+
+Student Panel
+│
+├── Dashboard
+├── My Courses
+│   ├── Course Details
+│   └── Study Materials
+├── Attendance
+├── Grades
+├── Timetable
+├── Assignments
+├── Notices
+└── Profile
+
+Faculty Panel
+│
+├── Dashboard
+├── My Courses
+│   └── Student List
+├── Mark Attendance
+├── Upload Grades
+├── Assignments
+├── Timetable
+├── Notices
+└── Profile
+
+Admin Panel
+│
+├── Dashboard
+├── Manage Students
+├── Manage Faculty
+├── Manage Courses
+├── Timetable Management
+├── Reports
+├── Notices
+└── Profile
