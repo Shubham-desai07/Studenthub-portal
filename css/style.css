@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    color: white;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+}
+
+h2 {
+    color: #1d1d8b;
+    margin-top: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: #444;
+    text-align: center;
+}
+
+/* Navigation list */
+ul {
+    background-color: #ffffff;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #1d1d8b;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff5722;
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 20px 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px auto;
+    background-color: white;
+}
+
+th {
+    background-color: #1d1d8b;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+form, p {
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"],
+input[type="reset"],
+button {
+    background-color: #1d1d8b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover {
+    background-color: #ff5722;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ffffff;
+    color: #666;
+    font-size: 13px;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+}
