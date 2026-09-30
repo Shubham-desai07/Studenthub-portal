@@ -3,67 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course</title>
-    <link rel="stylesheet" type="text/css" href="C:\Users\desai\OneDrive\Documents\web devlopment\Studenthub portal\css\style.css">
+    <title>StudentHub Portal - Courses</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-<h1 style="background-color: rgb(29,29,139);">StudentHub Portal</h1>
+    <header>
+        <h1><a href="index.html">🎓 StudentHub</a></h1>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">☰</button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="course.html" class="active">Courses</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="assignment.html">Assignments</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <button id="themeBtn" class="btn">🌙 Dark Mode</button>
+    </header>
 
-<ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="login.html">Login</a></li>
-    <li><a href="dashboard.html">Dashboard</a></li>
-    <li><a href="profile.html">Profile</a></li>
-    <li><a href="course.html">Course</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="attendance.html">Attendance</a></li>
-    <li><a href="assignment.html">Assignment</a></li>
-    <li><a href="result.html">Result</a></li>
-</ul>
+    <main id="main-content" class="container">
+        
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="index.html">Home</a> &gt; <span>Courses</span>
+        </nav>
 
-<hr>
+        <h2>Enrolled Semester Courses</h2>
+        <p>Current registered courses for Semester 3, Computer Engineering.</p>
 
-<h2>My Courses</h2>
+        <!-- Course Table (Practical 2 & 3) -->
+        <section class="card" style="margin-top: 15px;">
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Title</th>
+                            <th>Faculty Name</th>
+                            <th>Credits</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CE101</td>
+                            <td>Programming in C++</td>
+                            <td>Prof. Patel</td>
+                            <td>4</td>
+                            <td><button class="btn" style="padding: 4px 8px; font-size: 0.8rem;" data-modal-target="courseModal">Syllabus</button></td>
+                        </tr>
+                        <tr>
+                            <td>CE102</td>
+                            <td>Web Development</td>
+                            <td>Prof. Shah</td>
+                            <td>5</td>
+                            <td><button class="btn" style="padding: 4px 8px; font-size: 0.8rem;" data-modal-target="courseModal">Syllabus</button></td>
+                        </tr>
+                        <tr>
+                            <td>CE103</td>
+                            <td>Mathematics III</td>
+                            <td>Prof. Mehta</td>
+                            <td>4</td>
+                            <td><button class="btn" style="padding: 4px 8px; font-size: 0.8rem;" data-modal-target="courseModal">Syllabus</button></td>
+                        </tr>
+                        <tr>
+                            <td>CE104</td>
+                            <td>Digital Electronics</td>
+                            <td>Prof. Joshi</td>
+                            <td>4</td>
+                            <td><button class="btn" style="padding: 4px 8px; font-size: 0.8rem;" data-modal-target="courseModal">Syllabus</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-<table border="1" cellpadding="10">
-<tr>
-    <th>Course Code</th>
-    <th>Course Name</th>
-    <th>Faculty</th>
-</tr>
+    </main>
 
-<tr>
-    <td>CE101</td>
-    <td>Programming in C++</td>
-    <td>Prof. Patel</td>
-</tr>
+    <!-- Modal Popup for Syllabus (Practical 4) -->
+    <div class="modal-overlay" id="courseModal">
+        <div class="modal-box">
+            <h3>📖 Course Syllabus Overview</h3>
+            <p style="margin-top: 10px;"><strong>Topics Covered:</strong></p>
+            <ul style="padding-left: 20px; font-size: 0.9rem; line-height: 1.8;">
+                <li>Unit 1: Fundamentals & Theory</li>
+                <li>Unit 2: Practical Lab Implementations</li>
+                <li>Unit 3: Advanced Concepts & Optimization</li>
+                <li>Unit 4: Mini-Project & Lab Viva</li>
+            </ul>
+            <div style="margin-top: 15px; text-align: right;">
+                <button class="btn modal-close">Close</button>
+            </div>
+        </div>
+    </div>
 
-<tr>
-    <td>CE102</td>
-    <td>Web Development</td>
-    <td>Prof. Shah</td>
-</tr>
-
-<tr>
-    <td>CE103</td>
-    <td>Mathematics</td>
-    <td>Prof. Mehta</td>
-</tr>
-
-<tr>
-    <td>CE104</td>
-    <td>Digital Electronics</td>
-    <td>Prof. Joshi</td>
-</tr>
-
-</table>
-
-<hr>
-
-<footer>
-<p>&copy; 2026 StudentHub Portal</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2026 StudentHub Portal | Designed for Semester 3 Web Development Lab Submission</p>
+        <p><a href="about.html">About Us</a> | <a href="contact.html">Contact Support</a> | <a href="faq.html">FAQ</a></p>
+    </footer>
 </body>
 </html>
