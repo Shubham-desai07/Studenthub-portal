@@ -3,92 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment</title>
-    <link rel="stylesheet" type="text/css" href="C:\Users\desai\OneDrive\Documents\web devlopment\Studenthub portal\css\style.css">
+    <title>StudentHub Portal - Assignments</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-<h1 style="background-color: rgb(29,29,139);">StudentHub Portal</h1>
+    <header>
+        <h1><a href="index.html">🎓 StudentHub</a></h1>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">☰</button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="assignment.html" class="active">Assignments</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <button id="themeBtn" class="btn">🌙 Dark Mode</button>
+    </header>
 
-<ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="login.html">Login</a></li>
-    <li><a href="dashboard.html">Dashboard</a></li>
-    <li><a href="profile.html">Profile</a></li>
-    <li><a href="course.html">Course</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="attendance.html">Attendance</a></li>
-    <li><a href="assignment.html">Assignment</a></li>
-    <li><a href="result.html">Result</a></li>
-</ul>
+    <main id="main-content" class="container">
+        
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="index.html">Home</a> &gt; <span>Assignments</span>
+        </nav>
 
-<hr>
+        <h2>Semester Assignments & Lab Submissions</h2>
 
-<h2>Assignment Details</h2>
+        <!-- Assignment List Table -->
+        <section class="card" style="margin-top: 15px;">
+            <h3>📋 Assignment Schedule</h3>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Assignment Title</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Web Development</td>
+                            <td>Practical 1 to 5 Portal Implementation</td>
+                            <td>05-10-2026</td>
+                            <td><span class="badge badge-orange">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>Programming in C++</td>
+                            <td>Binary Search & Templates Program</td>
+                            <td>08-10-2026</td>
+                            <td><span class="badge badge-green">Submitted</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mathematics III</td>
+                            <td>Matrix Eigenvalues Assignment</td>
+                            <td>10-10-2026</td>
+                            <td><span class="badge badge-orange">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>Digital Electronics</td>
+                            <td>Flip-Flop Truth Tables Lab</td>
+                            <td>12-10-2026</td>
+                            <td><span class="badge badge-orange">Pending</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-<table border="1" cellpadding="10">
-    <tr>
-        <th>Subject</th>
-        <th>Assignment</th>
-        <th>Due Date</th>
-        <th>Status</th>
-    </tr>
+        <!-- Upload Form -->
+        <section class="card" style="max-width: 500px; margin-top: 20px;">
+            <h3>📤 Upload Assignment Solution</h3>
+            <form onsubmit="event.preventDefault(); alert('Assignment submitted successfully!'); this.reset();">
+                <div class="form-group">
+                    <label for="assignSubject">Select Subject:</label>
+                    <select id="assignSubject" required>
+                        <option>Web Development</option>
+                        <option>Programming in C++</option>
+                        <option>Mathematics III</option>
+                        <option>Digital Electronics</option>
+                    </select>
+                </div>
 
-    <tr>
-        <td>Web Development</td>
-        <td>Design StudentHub Home Page</td>
-        <td>05-08-2026</td>
-        <td>Pending</td>
-    </tr>
+                <div class="form-group">
+                    <label for="assignFile">Choose Solution File (PDF / ZIP):</label>
+                    <input type="file" id="assignFile" required>
+                </div>
 
-    <tr>
-        <td>Programming in C++</td>
-        <td>Binary Search Program</td>
-        <td>08-08-2026</td>
-        <td>Submitted</td>
-    </tr>
+                <button type="submit" class="btn" style="margin-top: 5px;">Submit Assignment</button>
+            </form>
+        </section>
 
-    <tr>
-        <td>Mathematics</td>
-        <td>Matrix Assignment</td>
-        <td>10-08-2026</td>
-        <td>Pending</td>
-    </tr>
+    </main>
 
-    <tr>
-        <td>Digital Electronics</td>
-        <td>Flip-Flop Experiment</td>
-        <td>12-08-2026</td>
-        <td>Pending</td>
-    </tr>
-</table>
-
-<hr>
-
-<h3>Upload Assignment</h3>
-
-<label>Subject :</label><br>
-<select>
-    <option>Web Development</option>
-    <option>Programming in C++</option>
-    <option>Mathematics</option>
-    <option>Digital Electronics</option>
-</select>
-
-<br><br>
-
-<label>Choose File :</label><br>
-<input type="file">
-
-<br><br>
-
-<button>Submit Assignment</button>
-
-<hr>
-
-<footer>
-    <p>&copy; 2026 StudentHub Portal</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2026 StudentHub Portal | Designed for Semester 3 Web Development Lab Submission</p>
+        <p><a href="about.html">About Us</a> | <a href="contact.html">Contact Support</a> | <a href="faq.html">FAQ</a></p>
+    </footer>
 </body>
 </html>
