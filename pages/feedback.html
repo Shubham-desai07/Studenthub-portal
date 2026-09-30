@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub Portal - Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1><a href="index.html">🎓 StudentHub</a></h1>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">☰</button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="assignment.html">Assignments</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html" class="active">Feedback</a></li>
+            </ul>
+        </nav>
+        <button id="themeBtn" class="btn">🌙 Dark Mode</button>
+    </header>
+
+    <main id="main-content" class="container">
+        
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="index.html">Home</a> &gt; <span>Feedback</span>
+        </nav>
+
+        <section class="card" style="max-width: 550px; margin: 20px auto;">
+            <h2>📝 Student Feedback Form</h2>
+            <p>Give your valuable feedback on courses, faculty teaching, and portal usability.</p>
+
+            <form onsubmit="event.preventDefault(); alert('Thank you! Your feedback has been submitted anonymously.'); this.reset();" style="margin-top: 15px;">
+                <div class="form-group">
+                    <label for="fbCourse">Select Subject / Module:</label>
+                    <select id="fbCourse" required>
+                        <option>Web Development (CE102)</option>
+                        <option>Programming in C++ (CE101)</option>
+                        <option>Mathematics III (CE103)</option>
+                        <option>Digital Electronics (CE104)</option>
+                        <option>Portal Usability & UI</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Overall Experience Rating:</label>
+                    <div style="display: flex; gap: 15px; margin-top: 5px;">
+                        <label style="font-weight: normal;"><input type="radio" name="rating" value="5" checked> ⭐ Excellent</label>
+                        <label style="font-weight: normal;"><input type="radio" name="rating" value="4"> Good</label>
+                        <label style="font-weight: normal;"><input type="radio" name="rating" value="3"> Average</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fbComments">Suggestions / Comments:</label>
+                    <textarea id="fbComments" rows="3" placeholder="Share your suggestions..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Submit Feedback</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub Portal | Designed for Semester 3 Web Development Lab Submission</p>
+        <p><a href="about.html">About Us</a> | <a href="contact.html">Contact Support</a> | <a href="faq.html">FAQ</a></p>
+    </footer>
+</body>
+</html>
