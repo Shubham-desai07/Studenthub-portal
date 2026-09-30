@@ -3,29 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="C:\Users\desai\OneDrive\Documents\web devlopment\Studenthub portal\css\style.css">
+    <title>StudentHub Portal - Events</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-<h1 style="background-color: rgb(29,29,139);">StudentHub Portal</h1>
+    <header>
+        <h1><a href="index.html">🎓 StudentHub</a></h1>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">☰</button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="assignment.html">Assignments</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="event.html" class="active">Events</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <button id="themeBtn" class="btn">🌙 Dark Mode</button>
+    </header>
 
-<ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="login.html">Login</a></li>
-    <li><a href="dashboard.html">Dashboard</a></li>
-    <li><a href="profile.html">Profile</a></li>
-    <li><a href="course.html">Course</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="attendance.html">Attendance</a></li>
-    <li><a href="assignment.html">Assignment</a></li>
-    <li><a href="result.html">Result</a></li>
-</ul>
+    <main id="main-content" class="container">
+        
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="index.html">Home</a> &gt; <span>Campus Events</span>
+        </nav>
 
-<hr>
-    <h1>Events</h1>
-        <ul>
-          <li>Placeholder event 1 — date, venue</li>
-          <li>Placeholder event 2 — date, venue</li>
-        </ul>
+        <h2>Upcoming Campus Events & Activities</h2>
+        <p>Explore technical symposiums, workshops, and fests dynamically loaded from external JSON data.</p>
+
+        <!-- Search, Filter & Sort Controls (Fetch API Practical) -->
+        <section class="filter-bar">
+            <div style="flex: 1; min-width: 220px;">
+                <input type="text" id="eventSearch" placeholder="🔍 Search event title, venue, organizer...">
+            </div>
+
+            <div class="filter-controls">
+                <!-- Category Filter -->
+                <select id="eventCategoryFilter" style="width: auto;">
+                    <option value="All">All Categories</option>
+                    <option value="Technical">Technical</option>
+                    <option value="Workshop">Workshop</option>
+                    <option value="Cultural">Cultural</option>
+                    <option value="Sports">Sports</option>
+                </select>
+
+                <!-- Sort Dropdown -->
+                <select id="eventSort" style="width: auto;">
+                    <option value="date-asc">Date (Earliest First)</option>
+                    <option value="date-desc">Date (Latest First)</option>
+                    <option value="title-asc">Title (A - Z)</option>
+                    <option value="title-desc">Title (Z - A)</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Dynamic Events Container -->
+        <div id="eventsLoading" class="loading-box">⏳ Loading events from events.json...</div>
+        <div id="eventsError" class="error-box" style="display: none;"></div>
+        <section id="eventsGrid" class="grid"></section>
+
+        <!-- Pagination Controls -->
+        <div id="eventsPagination" class="pagination"></div>
+
+    </main>
+
+    <!-- Event Registration Modal (Practical 4) -->
+    <div class="modal-overlay" id="eventModal">
+        <div class="modal-box">
+            <h3 id="modalEventTitle">🎉 Register for Event</h3>
+            <p id="modalEventDetails" style="margin-top: 10px; font-size: 0.9rem; color: var(--text-muted);"></p>
+            <div class="form-group" style="margin-top: 12px;">
+                <label>Student Name:</label>
+                <input type="text" value="Shubham Desai (25DCE020)" readonly>
+            </div>
+            <div style="margin-top: 15px; display: flex; justify-content: flex-end; gap: 10px;">
+                <button class="btn btn-secondary modal-close">Cancel</button>
+                <button class="btn" onclick="alert('Event registration confirmed!'); document.getElementById('eventModal').classList.remove('open');">Confirm Registration</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 StudentHub Portal | Designed for Semester 3 Web Development Lab Submission</p>
+        <p><a href="about.html">About Us</a> | <a href="contact.html">Contact Support</a> | <a href="faq.html">FAQ</a></p>
+    </footer>
 </body>
 </html>
