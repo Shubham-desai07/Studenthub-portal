@@ -3,30 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="C:\Users\desai\OneDrive\Documents\web devlopment\Studenthub portal\css\style.css">
+    <title>StudentHub Portal - Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1 style="background-color: rgb(29,29,139);">StudentHub Portal</h1>
 
-<ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="login.html">Login</a></li>
-    <li><a href="dashboard.html">Dashboard</a></li>
-    <li><a href="profile.html">Profile</a></li>
-    <li><a href="course.html">Course</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="attendance.html">Attendance</a></li>
-    <li><a href="assignment.html">Assignment</a></li>
-    <li><a href="result.html">Result</a></li>
-</ul>
+    <header>
+        <h1><a href="index.html">🎓 StudentHub</a></h1>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">☰</button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="assignment.html">Assignments</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <button id="themeBtn" class="btn">🌙 Dark Mode</button>
+    </header>
 
-<hr>
-    <h2> Contact/help</h2>
-    
-    <p>Subject:<br><input type="text" name="subject"><br></p>
-    <p>Message:<br><textarea id="text" name="Message" rows="4"></textarea><br></p>
+    <main id="main-content" class="container">
+        
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="index.html">Home</a> &gt; <span>Contact & Helpdesk</span>
+        </nav>
 
-    <input type="submit" name="submit">
+        <h2>Contact Campus Support</h2>
+        <p>Have an academic inquiry or portal technical issue? Send a message to our department helpdesk.</p>
+
+        <section class="grid" style="margin-top: 15px;">
+            <article class="card">
+                <h3>📍 Department Address</h3>
+                <p><strong>Department of Computer Engineering</strong></p>
+                <p>CHARUSAT Campus, Changa - 388421</p>
+                <p>Dist. Anand, Gujarat, India</p>
+                <p style="margin-top: 10px;"><strong>Email:</strong> helpdesk@charusat.edu.in</p>
+                <p><strong>Phone:</strong> +91 2697 265011</p>
+            </article>
+
+            <article class="card">
+                <h3>✉️ Send Support Message</h3>
+                <form onsubmit="event.preventDefault(); alert('Message sent successfully to department helpdesk!'); this.reset();">
+                    <div class="form-group">
+                        <label for="contactSubject">Subject:</label>
+                        <input type="text" id="contactSubject" placeholder="e.g. Attendance Correction" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactMsg">Message / Query:</label>
+                        <textarea id="contactMsg" rows="3" placeholder="Describe your query..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub Portal | Designed for Semester 3 Web Development Lab Submission</p>
+        <p><a href="about.html">About Us</a> | <a href="contact.html">Contact Support</a> | <a href="faq.html">FAQ</a></p>
+    </footer>
 </body>
 </html>
