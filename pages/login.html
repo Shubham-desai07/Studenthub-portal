@@ -3,39 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="C:\Users\desai\OneDrive\Documents\web devlopment\Studenthub portal\css\style.css">
+    <title>StudentHub Portal - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1 style="background-color: rgb(29,29,139);">StudentHub Portal</h1>
 
-<ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="login.html">Login</a></li>
-    <li><a href="dashboard.html">Dashboard</a></li>
-    <li><a href="profile.html">Profile</a></li>
-    <li><a href="course.html">Course</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="attendance.html">Attendance</a></li>
-    <li><a href="assignment.html">Assignment</a></li>
-    <li><a href="result.html">Result</a></li>
-</ul>
+    <header>
+        <h1><a href="index.html">🎓 StudentHub</a></h1>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">☰</button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="assignment.html">Assignments</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+        <button id="themeBtn" class="btn">🌙 Dark Mode</button>
+    </header>
 
-<hr>
-    <h2> Login page</h2>
+    <main id="main-content" class="container">
+        
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="index.html">Home</a> &gt; <span>Login</span>
+        </nav>
 
-    <p>Login As:<br>
+        <section class="card" style="max-width: 450px; margin: 20px auto;">
+            <h2 style="text-align: center; margin-bottom: 15px;">Portal Login</h2>
 
-    <select name="login as" id="login as">
-        <option value="student">Student</option>
-        <option value="faculty">Faculty</option>
-        <option value="Administer">Administer</option>
-    </select>
-    </p>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginRole">Login As:</label>
+                    <select id="loginRole" name="role">
+                        <option value="student">Student</option>
+                        <option value="faculty">Faculty</option>
+                        <option value="admin">Administrator</option>
+                    </select>
+                </div>
 
-    <p>UserName/mail:<br><input type="text" name="username/mail"><br></p>
-    <p>PassWord:<br><input type="text" name="Password"><br></p>
+                <div class="form-group">
+                    <label for="username">Username / Email:</label>
+                    <input type="text" id="username" name="username" placeholder="e.g. shubham.desai" required>
+                </div>
 
-    <input type="submit" name="submit"><br>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="password" placeholder="Enter password" required>
+                </div>
+
+                <div class="form-group" style="margin-top: 15px;">
+                    <button type="submit" class="btn" style="width: 100%;">Login to StudentHub</button>
+                </div>
+
+                <p style="text-align: center; font-size: 0.85rem; margin-top: 12px;">
+                    New student? <a href="register.html">Register here</a>
+                </p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub Portal | Designed for Semester 3 Web Development Lab Submission</p>
+        <p><a href="about.html">About Us</a> | <a href="contact.html">Contact Support</a> | <a href="faq.html">FAQ</a></p>
+    </footer>
 </body>
 </html>
