@@ -3,42 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" type="text/css" href="C:\Users\desai\OneDrive\Documents\web devlopment\Studenthub portal\css\style.css">
+    <title>StudentHub Portal - Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-<h1 style="background-color: rgb(29,29,139);">StudentHub Portal</h1>
+    <header>
+        <h1><a href="index.html">🎓 StudentHub</a></h1>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">☰</button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="assignment.html">Assignments</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+            </ul>
+        </nav>
+        <button id="themeBtn" class="btn">🌙 Dark Mode</button>
+    </header>
 
-<ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="login.html">Login</a></li>
-    <li><a href="dashboard.html">Dashboard</a></li>
-    <li><a href="profile.html">Profile</a></li>
-    <li><a href="course.html">Course</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="attendance.html">Attendance</a></li>
-    <li><a href="assignment.html">Assignment</a></li>
-    <li><a href="result.html">Result</a></li>
-</ul>
+    <main id="main-content" class="container">
+        
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="index.html">Home</a> &gt; <span>Student Profile</span>
+        </nav>
 
-<hr>
+        <section class="card" style="max-width: 600px; margin: 20px auto;">
+            <h2>👤 Student Profile Details</h2>
+            <hr style="margin: 12px 0; border: 0; border-top: 1px solid var(--border-color);">
 
-<h2>Student Profile</h2>
+            <table style="margin-top: 10px;">
+                <tr>
+                    <th style="width: 40%;">Student Name</th>
+                    <td>Shubham Desai</td>
+                </tr>
+                <tr>
+                    <th>Enrollment No.</th>
+                    <td>25DCE020</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>shubham@gmail.com</td>
+                </tr>
+                <tr>
+                    <th>Mobile</th>
+                    <td>+91 9876543210</td>
+                </tr>
+                <tr>
+                    <th>Department</th>
+                    <td>Computer Engineering</td>
+                </tr>
+                <tr>
+                    <th>Current Semester</th>
+                    <td>Semester 3</td>
+                </tr>
+                <tr>
+                    <th>University</th>
+                    <td>CHARUSAT University</td>
+                </tr>
+            </table>
 
-<p><b>Name :</b> Shubham Desai</p>
-<p><b>Enrollment Number :</b> 25DCE020</p>
-<p><b>Email :</b> shubham@gmail.com</p>
-<p><b>Mobile :</b> 9876543210</p>
-<p><b>Department :</b> Computer Engineering</p>
-<p><b>Semester :</b> 3</p>
-<p><b>College :</b> CHARUSAT University</p>
+            <div style="margin-top: 20px; display: flex; gap: 10px;">
+                <button class="btn" onclick="alert('Profile updated successfully!')">Edit Information</button>
+                <a href="dashboard.html" class="btn btn-secondary">Back to Dashboard</a>
+            </div>
+        </section>
 
-<hr>
+    </main>
 
-<footer>
-<p>&copy; 2026 StudentHub Portal</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2026 StudentHub Portal | Designed for Semester 3 Web Development Lab Submission</p>
+        <p><a href="about.html">About Us</a> | <a href="contact.html">Contact Support</a> | <a href="faq.html">FAQ</a></p>
+    </footer>
 </body>
 </html>
