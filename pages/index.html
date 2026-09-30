@@ -1,35 +1,123 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="C:\Users\desai\OneDrive\Documents\web devlopment\Studenthub portal\css\style.css">
-  
+    <title>StudentHub Portal - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1 style="background-color: rgb(29, 29, 139);">Studenthub Portal </h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-           <li><a href="login.html">Login</a></li>
-           <li><a href="dashboard.html">Dashboard</a></li> 
-           <li><a href="profile.html">Profile</a></li>
-           <li><a href="course.html">Course</a></li>
-           <li><a href="contact.html">Contact</a></li>
-           <li><a href="attendance.html">Attendance</a></li>
-           <li><a href="assignment.html">Assinment</a></li>
-           <li><a href="result.html">Result</a></li>
-        </ul>
-        <hr>
-        <h2>Welcome to StudentHub</h2>
-        <p>StudentHub is a single portal for students, faculty and admin staff to manage
-        academics, notices, attendance, results, library and fee-related tasks.</p>
-        <p><a href="login.html">Login</a> or <a href="register.html">Register</a> to get started.</p>
-      </section>
-    <hr>
-    <footer class="site-footer">
-    <p>&copy; 2026 StudentHub Portal | <a href="contact.html">Contact</a> | <a href="index.html">Home</a></p>
+
+    <!-- Notification Banner (Practical 4) -->
+    <div class="banner" id="notification-banner">
+        <span>📢 Notice: Mid-Semester exam schedule is now published. Check timetable!</span>
+        <button id="closeBanner" aria-label="Close notification">&times;</button>
+    </div>
+
+    <!-- Header & Navigation (Practical 2 & 3) -->
+    <header>
+        <h1><a href="index.html">🎓 StudentHub</a></h1>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">☰</button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="assignment.html">Assignments</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+        <button id="themeBtn" class="btn">🌙 Dark Mode</button>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container">
+        
+        <!-- Welcome Hero Section -->
+        <section class="card" style="text-align: center; margin-top: 10px;">
+            <h2>Welcome to StudentHub Portal</h2>
+            <p>A unified academic management portal for Students, Faculty, and Admin staff.</p>
+            <div style="margin-top: 15px;">
+                <a href="login.html" class="btn">Login to Portal</a>
+                <a href="register.html" class="btn btn-secondary">New Registration</a>
+            </div>
+        </section>
+
+        <!-- Content Slider / Carousel (Practical 4) -->
+        <section class="slider" aria-label="Highlights">
+            <button class="slider-btn prev" aria-label="Previous">&lt;</button>
+            <div class="slide active">
+                <h3>📊 Track Real-time Attendance</h3>
+                <p>Check subject-wise attendance and maintain minimum 80% criteria.</p>
+            </div>
+            <div class="slide">
+                <h3>📝 Online Assignment Submissions</h3>
+                <p>Submit lab practicals and homework before deadline dates.</p>
+            </div>
+            <div class="slide">
+                <h3>📜 Instant Semester Grade Sheets</h3>
+                <p>View marks, grade points, and calculate your SGPA/CGPA easily.</p>
+            </div>
+            <button class="slider-btn next" aria-label="Next">&gt;</button>
+        </section>
+
+        <!-- User Roles Grid (Practical 1 & 3) -->
+        <h3 style="margin-top: 20px;">👥 User Roles & Portals</h3>
+        <section class="grid">
+            <article class="card">
+                <h3>Student Panel</h3>
+                <p>View courses, daily attendance, exam results, and submit assignments.</p>
+                <a href="dashboard.html" class="btn">Open Student Dashboard</a>
+            </article>
+
+            <article class="card">
+                <h3>Faculty Panel</h3>
+                <p>Mark class attendance, upload study materials, and grade student submissions.</p>
+                <a href="course.html" class="btn">Open Courses</a>
+            </article>
+
+            <article class="card">
+                <h3>Admin Panel</h3>
+                <p>Manage student registrations, faculty allocations, and post campus notices.</p>
+                <a href="contact.html" class="btn">Helpdesk</a>
+            </article>
+        </section>
+
+        <!-- Quick Stats Grid (Practical 3) -->
+        <h3 style="margin-top: 20px;">📈 Portal Overview</h3>
+        <section class="grid">
+            <div class="card stat-box">
+                <div class="stat-number">1,400+</div>
+                <p>Students Enrolled</p>
+            </div>
+            <div class="card stat-box">
+                <div class="stat-number">80+</div>
+                <p>Faculty Members</p>
+            </div>
+            <div class="card stat-box">
+                <div class="stat-number">40+</div>
+                <p>Active Courses</p>
+            </div>
+            <div class="card stat-box">
+                <div class="stat-number">98%</div>
+                <p>Passing Rate</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Practical 2) -->
+    <footer>
+        <p>&copy; 2026 StudentHub Portal | Designed for Semester 3 Web Development Lab Submission</p>
+        <p><a href="about.html">About Us</a> | <a href="contact.html">Contact Support</a> | <a href="faq.html">FAQ</a></p>
     </footer>
 </body>
 </html>
