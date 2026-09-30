@@ -3,41 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="C:\Users\desai\OneDrive\Documents\web devlopment\Studenthub portal\css\style.css">
+    <title>StudentHub Portal - Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1 style="background-color: rgb(29,29,139);">StudentHub Portal</h1>
 
-<ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="login.html">Login</a></li>
-    <li><a href="dashboard.html">Dashboard</a></li>
-    <li><a href="profile.html">Profile</a></li>
-    <li><a href="course.html">Course</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="attendance.html">Attendance</a></li>
-    <li><a href="assignment.html">Assignment</a></li>
-    <li><a href="result.html">Result</a></li>
-</ul>
+    <header>
+        <h1><a href="index.html">🎓 StudentHub</a></h1>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">☰</button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="assignment.html">Assignments</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html" class="active">Register</a></li>
+            </ul>
+        </nav>
+        <button id="themeBtn" class="btn">🌙 Dark Mode</button>
+    </header>
 
-<hr>
-    <h2> Registration Page</h2>
+    <main id="main-content" class="container">
+        
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="index.html">Home</a> &gt; <span>Student Registration</span>
+        </nav>
 
-    <p>Enter your full Name:<br><input type="text" name="name"><br></p>
+        <section class="card" style="max-width: 550px; margin: 15px auto;">
+            <h2 style="text-align: center; margin-bottom: 15px;">Student Registration Form</h2>
 
-      <p>Register As:<br>
+            <!-- Registration Form (Practical 5) -->
+            <form id="registerForm" novalidate>
+                
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="e.g. Shubham Desai" required>
+                    <div class="error-msg" id="fullNameError"></div>
+                </div>
 
-    <select name="register as" id="login as">
-        <option value="student">Student</option>
-        <option value="faculty">Faculty</option>
-        <option value="Administer">Administer</option>
-    </select>
-    </p>
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="e.g. shubham@gmail.com" required>
+                    <div class="error-msg" id="emailError"></div>
+                </div>
 
-    <p>UserName/mail:<br><input type="text" name="username/mail"><br></p>   
-    <p>PassWord:<br><input type="text" name="Password"><br></p>
+                <!-- Mobile -->
+                <div class="form-group">
+                    <label for="mobile">Mobile Number *</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" maxlength="10" required>
+                    <div class="error-msg" id="mobileError"></div>
+                </div>
 
-    <input type="submit" name="submit"><br>
+                <!-- Password with Strength Meter -->
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" placeholder="Min 8 chars with upper, lower, number, symbol" required>
+                    <div class="strength-bar">
+                        <div class="strength-fill" id="strengthFill"></div>
+                    </div>
+                    <div id="strengthLabel" style="font-size: 0.8rem; font-weight: bold; margin-top: 3px;"></div>
+                    <div class="error-msg" id="passwordError"></div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter password" required>
+                    <div class="error-msg" id="confirmPasswordError"></div>
+                </div>
+
+                <!-- Course & Year -->
+                <div class="form-group">
+                    <label for="course">Select Course *</label>
+                    <select id="course" name="course" required>
+                        <option value="">-- Choose Course --</option>
+                        <option value="B.Tech Computer Engineering">B.Tech Computer Engineering</option>
+                        <option value="B.Tech Information Technology">B.Tech Information Technology</option>
+                        <option value="B.Tech AI & Data Science">B.Tech AI & Data Science</option>
+                    </select>
+                    <div class="error-msg" id="courseError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="year">Year of Study</label>
+                    <select id="year" name="year">
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year" selected>2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                        <option value="4th Year">4th Year</option>
+                    </select>
+                </div>
+
+                <!-- Gender -->
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div style="display: flex; gap: 15px; margin-top: 4px;">
+                        <label style="font-weight: normal;"><input type="radio" name="gender" value="Male" checked> Male</label>
+                        <label style="font-weight: normal;"><input type="radio" name="gender" value="Female"> Female</label>
+                        <label style="font-weight: normal;"><input type="radio" name="gender" value="Other"> Other</label>
+                    </div>
+                </div>
+
+
+                <!-- Terms Checkbox -->
+                <div class="form-group">
+                    <label style="font-weight: normal; font-size: 0.85rem;">
+                        <input type="checkbox" id="terms" name="terms"> I accept the Terms & Conditions and Privacy Policy. *
+                    </label>
+                    <div class="error-msg" id="termsError"></div>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%; padding: 10px; font-size: 1rem; margin-top: 5px;">Submit Registration</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub Portal | Designed for Semester 3 Web Development Lab Submission</p>
+        <p><a href="about.html">About Us</a> | <a href="contact.html">Contact Support</a> | <a href="faq.html">FAQ</a></p>
+    </footer>
 </body>
 </html>
