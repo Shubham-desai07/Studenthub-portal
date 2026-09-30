@@ -3,51 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="C:\Users\desai\OneDrive\Documents\web devlopment\Studenthub portal\css\style.css">
+    <title>StudentHub Portal - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-<h1 style="background-color: rgb(29,29,139);">StudentHub Portal</h1>
+    <header>
+        <h1><a href="index.html">🎓 StudentHub</a></h1>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">☰</button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="assignment.html">Assignments</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <button id="themeBtn" class="btn">🌙 Dark Mode</button>
+    </header>
 
-<ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="login.html">Login</a></li>
-    <li><a href="dashboard.html">Dashboard</a></li>
-    <li><a href="profile.html">Profile</a></li>
-    <li><a href="course.html">Course</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="attendance.html">Attendance</a></li>
-    <li><a href="assignment.html">Assignment</a></li>
-    <li><a href="result.html">Result</a></li>
-</ul>
+    <main id="main-content" class="container">
+        
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="index.html">Home</a> &gt; <span>Student Dashboard</span>
+        </nav>
 
-<hr>
+        <!-- Student Info Header -->
+        <section class="card" style="margin-bottom: 20px;">
+            <h2>Welcome back, Shubham Desai</h2>
+            <p><strong>Enrollment:</strong> 25DCE020 | <strong>Department:</strong> Computer Engineering | <strong>Semester:</strong> 3</p>
+        </section>
 
-<h2>Student Dashboard</h2>
+        <!-- Academic Stat Overview (Practical 3 Grid) -->
+        <section class="grid">
+            <div class="card stat-box">
+                <div class="stat-number">88.5%</div>
+                <p>Overall Attendance</p>
+            </div>
+            <div class="card stat-box">
+                <div class="stat-number">8.48</div>
+                <p>Current CGPA</p>
+            </div>
+            <div class="card stat-box">
+                <div class="stat-number">4</div>
+                <p>Enrolled Courses</p>
+            </div>
+            <div class="card stat-box">
+                <div class="stat-number">3</div>
+                <p>Pending Assignments</p>
+            </div>
+        </section>
 
-<p><b>Student Name :</b> Shubham Desai</p>
-<p><b>Enrollment No :</b> 25dce020</p>
-<p><b>Semester :</b> 1</p>
-<p><b>Department :</b> Computer Engineering</p>
+        <!-- Today's Schedule Table -->
+        <section class="card" style="margin-top: 20px;">
+            <h3>📅 Today's Timetable (Tuesday)</h3>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Subject</th>
+                            <th>Room</th>
+                            <th>Faculty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>09:00 - 10:00 AM</td>
+                            <td>Web Development (CE102)</td>
+                            <td>Lab 301</td>
+                            <td>Prof. Shah</td>
+                        </tr>
+                        <tr>
+                            <td>10:15 - 11:15 AM</td>
+                            <td>Programming in C++ (CE101)</td>
+                            <td>Room 204</td>
+                            <td>Prof. Patel</td>
+                        </tr>
+                        <tr>
+                            <td>11:30 - 12:30 PM</td>
+                            <td>Mathematics III (CE103)</td>
+                            <td>Room 105</td>
+                            <td>Prof. Mehta</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-<hr>
+        <!-- Quick Links (Practical 2) -->
+        <section class="card" style="margin-top: 20px;">
+            <h3>🚀 Quick Navigation</h3>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
+                <a href="attendance.html" class="btn">Check Attendance</a>
+                <a href="assignment.html" class="btn">Submit Assignments</a>
+                <a href="result.html" class="btn">View Grade Card</a>
+                <a href="course.html" class="btn btn-secondary">Study Materials</a>
+                <a href="profile.html" class="btn btn-secondary">My Profile</a>
+            </div>
+        </section>
 
-<h3>Quick Links</h3>
+    </main>
 
-<ul>
-    <li>Attendance</li>
-    <li>Assignments</li>
-    <li>Results</li>
-    <li>Courses</li>
-    <li>Profile</li>
-</ul>
-
-<hr>
-
-<footer>
-<p>&copy; 2026 StudentHub Portal</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2026 StudentHub Portal | Designed for Semester 3 Web Development Lab Submission</p>
+        <p><a href="about.html">About Us</a> | <a href="contact.html">Contact Support</a> | <a href="faq.html">FAQ</a></p>
+    </footer>
 </body>
 </html>
