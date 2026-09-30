@@ -1,85 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Student Result</title>
-    <link rel="stylesheet" type="text/css" href="C:\Users\desai\OneDrive\Documents\web devlopment\Studenthub portal\css\style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub Portal - Results</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-<h1 style="background-color: rgb(29,29,139);">StudentHub Portal</h1>
 
-<ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="login.html">Login</a></li>
-    <li><a href="dashboard.html">Dashboard</a></li>
-    <li><a href="profile.html">Profile</a></li>
-    <li><a href="course.html">Course</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="attendance.html">Attendance</a></li>
-    <li><a href="assignment.html">Assignment</a></li>
-    <li><a href="result.html">Result</a></li>
-</ul>
+    <header>
+        <h1><a href="index.html">🎓 StudentHub</a></h1>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">☰</button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="assignment.html">Assignments</a></li>
+                <li><a href="result.html" class="active">Results</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <button id="themeBtn" class="btn">🌙 Dark Mode</button>
+    </header>
 
-<hr>
-    <h2 align="center">Student Result</h2>
+    <main id="main-content" class="container">
+        
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="index.html">Home</a> &gt; <span>Semester Result</span>
+        </nav>
 
-    <table border="1" align="center" cellpadding="10">
-        <tr>
-            <th>Student Name</th>
-            <td>Shubham Desai</td>
-        </tr>
-        <tr>
-            <th>Roll No</th>
-            <td>25DCE020</td>
-        </tr>
-        <tr>
-            <th>Course</th>
-            <td>B.Tech Computer Science</td>
-        </tr>
-    </table>
+        <h2>Semester Examination Marksheet</h2>
 
-    <br>
+        <!-- Student Info Card -->
+        <section class="card" style="margin-top: 15px;">
+            <p><strong>Student Name:</strong> Shubham Desai &bull; <strong>Roll No:</strong> 25DCE020</p>
+            <p><strong>Branch:</strong> B.Tech Computer Engineering &bull; <strong>Semester:</strong> 2 (Previous Term)</p>
+        </section>
 
-    <table border="1" align="center" cellpadding="10">
-        <tr>
-            <th>Subject</th>
-            <th>Marks</th>
-            <th>Grade</th>
-        </tr>
-        <tr>
-            <td>Mathematics</td>
-            <td>85</td>
-            <td>A</td>
-        </tr>
-        <tr>
-            <td>Physics</td>
-            <td>78</td>
-            <td>B+</td>
-        </tr>
-        <tr>
-            <td>C Programming</td>
-            <td>92</td>
-            <td>A+</td>
-        </tr>
-        <tr>
-            <td>English</td>
-            <td>81</td>
-            <td>A</td>
-        </tr>
-        <tr>
-            <td>Computer Fundamentals</td>
-            <td>88</td>
-            <td>A</td>
-        </tr>
-        <tr>
-            <th>Total</th>
-            <th>424 / 500</th>
-            <th>84.8%</th>
-        </tr>
-        <tr>
-            <th colspan="2">Result</th>
-            <th>PASS</th>
-        </tr>
-    </table>
+        <!-- Marks Table (Practical 2 & 3) -->
+        <section class="card" style="margin-top: 20px;">
+            <h3>📊 Subject-wise Marks & Grades</h3>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Max Marks</th>
+                            <th>Marks Obtained</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mathematics II</td>
+                            <td>100</td>
+                            <td>85</td>
+                            <td><span class="badge badge-green">A</span></td>
+                        </tr>
+                        <tr>
+                            <td>Physics for Engineers</td>
+                            <td>100</td>
+                            <td>78</td>
+                            <td><span class="badge badge-blue">B+</span></td>
+                        </tr>
+                        <tr>
+                            <td>C Programming & Data Structures</td>
+                            <td>100</td>
+                            <td>92</td>
+                            <td><span class="badge badge-green">A+</span></td>
+                        </tr>
+                        <tr>
+                            <td>Professional English</td>
+                            <td>100</td>
+                            <td>81</td>
+                            <td><span class="badge badge-green">A</span></td>
+                        </tr>
+                        <tr>
+                            <td>Computer Fundamentals</td>
+                            <td>100</td>
+                            <td>88</td>
+                            <td><span class="badge badge-green">A</span></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr style="font-weight: bold; background-color: var(--table-row-alt);">
+                            <td>Total Summary</td>
+                            <td>500</td>
+                            <td>424 / 500 (84.8%)</td>
+                            <td><span class="badge badge-green">PASS (SGPA: 8.48)</span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
 
+            <div style="margin-top: 15px;">
+                <button class="btn" onclick="window.print()">🖨️ Print Marksheet</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub Portal | Designed for Semester 3 Web Development Lab Submission</p>
+        <p><a href="about.html">About Us</a> | <a href="contact.html">Contact Support</a> | <a href="faq.html">FAQ</a></p>
+    </footer>
 </body>
 </html>
