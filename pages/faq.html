@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub Portal - FAQ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">🎓 StudentHub</a></h1>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">☰</button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="attendance.html">Attendance</a></li>
+                <li><a href="assignment.html">Assignments</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+        <button id="themeBtn" class="btn">🌙 Dark Mode</button>
+    </header>
+
+    <main id="main-content" class="container">
+        
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="index.html">Home</a> &gt; <span>Frequently Asked Questions</span>
+        </nav>
+
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <p>Browse campus answers loaded dynamically from external JSON data. Click to expand.</p>
+
+        <!-- Search & Category Filter for FAQs -->
+        <section class="filter-bar" style="max-width: 750px;">
+            <div style="flex: 1; min-width: 200px;">
+                <input type="text" id="faqSearch" placeholder="🔍 Search FAQ questions...">
+            </div>
+            <div class="filter-controls">
+                <select id="faqCategoryFilter" style="width: auto;">
+                    <option value="All">All Categories</option>
+                    <option value="Academic">Academic</option>
+                    <option value="Portal">Portal</option>
+                    <option value="Exam">Exam</option>
+                    <option value="Events">Events</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Dynamic FAQ Accordion Container -->
+        <div id="faqLoading" class="loading-box">⏳ Loading FAQs from faqs.json...</div>
+        <section id="faqAccordionContainer" style="margin-top: 15px; max-width: 750px;"></section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudentHub Portal | Designed for Semester 3 Web Development Lab Submission</p>
+        <p><a href="about.html">About Us</a> | <a href="contact.html">Contact Support</a> | <a href="faq.html">FAQ</a></p>
+    </footer>
+</body>
+</html>
