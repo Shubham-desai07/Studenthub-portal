@@ -1,131 +1,468 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
+/* ===== StudentHub Portal - style.css ===== */
+
+/* 1. Theme Color Variables (Light & Dark Mode) */
+:root {
+    --bg-color: #f4f6f9;
+    --card-bg: #ffffff;
+    --text-color: #2c3e50;
+    --text-muted: #7f8c8d;
+    --primary-color: #34495e;
+    --accent-color: #2980b9;
+    --accent-hover: #1abc9c;
+    --border-color: #dcdde1;
+    --table-header-bg: #2980b9;
+    --table-row-alt: #f8f9fa;
+    --error-color: #e74c3c;
+    --success-color: #27ae60;
+}
+
+body.dark {
+    --bg-color: #1e272e;
+    --card-bg: #2d3436;
+    --text-color: #f5f6fa;
+    --text-muted: #d2dae2;
+    --primary-color: #0f1419;
+    --accent-color: #3498db;
+    --accent-hover: #1abc9c;
+    --border-color: #485460;
+    --table-header-bg: #1e3799;
+    --table-row-alt: #353b48;
+}
+
+/* 2. Global Reset & Typography */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
-h1 {
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* 3. Header & Navigation (Flexbox) */
+header {
+    background-color: var(--primary-color);
     color: white;
-    padding: 15px;
-    margin: 0;
-    text-align: center;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 
-h2 {
-    color: #1d1d8b;
-    margin-top: 20px;
-    text-align: center;
+header h1 {
+    font-size: 1.4rem;
 }
 
-h3 {
-    color: #444;
-    text-align: center;
-}
-
-/* Navigation list */
-ul {
-    background-color: #ffffff;
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-    text-align: center;
-}
-
-li {
-    display: inline-block;
-    margin: 5px 10px;
-}
-
-a {
+header h1 a {
+    color: white;
     text-decoration: none;
-    color: #1d1d8b;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
     font-weight: bold;
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background 0.2s;
 }
 
-a:hover {
-    color: #ff5722;
-    text-decoration: underline;
+nav a:hover, nav a.active {
+    background-color: var(--accent-color);
+    color: white;
 }
 
-hr {
+.hamburger-btn {
+    display: none;
+    background: none;
     border: none;
-    border-top: 2px solid #ccc;
-    margin: 20px 0;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Notification Banner (Practical 4) */
+.banner {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.banner button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* 4. Layout Container & Breadcrumbs */
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.breadcrumbs {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.breadcrumbs a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* 5. Cards & CSS Grid (Practical 3) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 18px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    color: var(--accent-color);
+    margin-bottom: 8px;
+}
+
+/* Stat Box */
+.stat-box {
+    text-align: center;
+    padding: 15px;
+}
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* 6. Tables (Practical 2 & 3) */
+.table-responsive {
+    overflow-x: auto;
+    margin: 15px 0;
 }
 
 table {
+    width: 100%;
     border-collapse: collapse;
-    width: 90%;
-    margin: 20px auto;
-    background-color: white;
+    background-color: var(--card-bg);
+}
+
+th, td {
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    font-size: 0.9rem;
 }
 
 th {
-    background-color: #1d1d8b;
+    background-color: var(--table-header-bg);
     color: white;
-    padding: 10px;
-}
-
-td {
-    padding: 10px;
-    text-align: center;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: var(--table-row-alt);
 }
 
-form, p {
-    max-width: 500px;
-    margin: 10px auto;
+/* Badges */
+.badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: white;
+}
+.badge-green { background-color: var(--success-color); }
+.badge-orange { background-color: #e67e22; }
+.badge-blue { background-color: var(--accent-color); }
+
+/* 7. Forms & Inputs (Practical 5) */
+.form-group {
+    margin-bottom: 12px;
 }
 
 label {
+    display: block;
     font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
 }
 
 input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
 input[type="date"],
-input[type="file"],
 select,
 textarea {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+    padding: 8px 10px;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
-    box-sizing: border-box;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-size: 0.9rem;
 }
 
-input[type="submit"],
-input[type="reset"],
-button {
-    background-color: #1d1d8b;
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+/* Validation Styling */
+input.invalid, select.invalid {
+    border-color: var(--error-color);
+    background-color: rgba(231, 76, 60, 0.05);
+}
+
+input.valid, select.valid {
+    border-color: var(--success-color);
+}
+
+.error-msg {
+    color: var(--error-color);
+    font-size: 0.8rem;
+    margin-top: 2px;
+    min-height: 16px;
+}
+
+/* Strength Bar */
+.strength-bar {
+    height: 5px;
+    background: #ccc;
+    border-radius: 3px;
+    margin-top: 4px;
+    overflow: hidden;
+}
+.strength-fill {
+    height: 100%;
+    width: 0;
+    transition: width 0.3s;
+}
+
+
+/* 8. Buttons */
+.btn {
+    background-color: var(--accent-color);
     color: white;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 15px;
-    margin-right: 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block;
+    text-decoration: none;
 }
 
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-button:hover {
-    background-color: #ff5722;
+.btn:hover {
+    background-color: var(--accent-hover);
 }
 
-/* Footer */
+.btn-secondary {
+    background-color: #7f8c8d;
+}
+
+/* 9. Practical 4 Components: Accordion, Modal, Slider */
+/* FAQ Accordion */
+.accordion-item {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    background-color: var(--card-bg);
+}
+
+.accordion-btn {
+    width: 100%;
+    padding: 10px 14px;
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion-body {
+    display: none;
+    padding: 10px 14px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+.accordion-body.open {
+    display: block;
+}
+
+/* Modal Popup */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-overlay.open {
+    display: flex;
+}
+.modal-box {
+    background: var(--card-bg);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 6px;
+    max-width: 450px;
+    width: 90%;
+}
+
+/* Slider / Carousel */
+.slider {
+    position: relative;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 25px;
+    text-align: center;
+    margin: 15px 0;
+}
+.slide { display: none; }
+.slide.active { display: block; }
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.slider-btn.prev { left: 10px; }
+.slider-btn.next { right: 10px; }
+/* 10. Filter Bar, Pagination & Loading (Fetch API & Dynamic Data) */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+    padding: 12px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+.filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 20px 0;
+}
+
+.page-btn {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.page-btn:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.page-btn.active {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+.page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.loading-box, .error-box {
+    text-align: center;
+    padding: 30px;
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+.error-box {
+    color: var(--error-color);
+}
+
+/* 11. Footer */
 footer {
     text-align: center;
-    padding: 15px;
-    background-color: #ffffff;
-    color: #666;
-    font-size: 13px;
-    margin-top: 20px;
-    border-top: 1px solid #ccc;
+    padding: 18px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.85rem;
+    margin-top: 30px;
+}
+footer a { color: #3498db; }
+
+/* 11. Mobile Responsive (Practical 3) */
+@media (max-width: 768px) {
+    .hamburger-btn { display: block; }
+    nav ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    nav ul.show { display: flex; }
+    .grid { grid-template-columns: 1fr; }
 }
