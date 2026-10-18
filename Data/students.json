@@ -1,0 +1,17 @@
+[
+  { "id": 1, "name": "Shubham Desai", "rollNo": "25DCE020", "department": "Computer Engineering", "semester": 3, "cgpa": 8.48, "email": "shubham@gmail.com" },
+  { "id": 2, "name": "Aarav Patel", "rollNo": "25DCE001", "department": "Computer Engineering", "semester": 3, "cgpa": 8.92, "email": "aarav.p@gmail.com" },
+  { "id": 3, "name": "Diya Sharma", "rollNo": "25DCE015", "department": "Information Technology", "semester": 3, "cgpa": 9.15, "email": "diya.s@gmail.com" },
+  { "id": 4, "name": "Rohan Mehta", "rollNo": "25DCE032", "department": "Computer Engineering", "semester": 3, "cgpa": 7.85, "email": "rohan.m@gmail.com" },
+  { "id": 5, "name": "Ananya Joshi", "rollNo": "25DCE008", "department": "Information Technology", "semester": 3, "cgpa": 8.60, "email": "ananya.j@gmail.com" },
+  { "id": 6, "name": "Karan Shah", "rollNo": "25DCE045", "department": "Computer Engineering", "semester": 3, "cgpa": 8.10, "email": "karan.s@gmail.com" },
+  { "id": 7, "name": "Pooja Trivedi", "rollNo": "25DCE028", "department": "AI & Data Science", "semester": 3, "cgpa": 9.30, "email": "pooja.t@gmail.com" },
+  { "id": 8, "name": "Manav Prajapati", "rollNo": "25DCE025", "department": "Computer Engineering", "semester": 3, "cgpa": 7.45, "email": "manav.p@gmail.com" },
+  { "id": 9, "name": "Sneha Varma", "rollNo": "25DCE052", "department": "Information Technology", "semester": 3, "cgpa": 8.75, "email": "sneha.v@gmail.com" },
+  { "id": 10, "name": "Yash Solanki", "rollNo": "25DCE060", "department": "AI & Data Science", "semester": 3, "cgpa": 8.20, "email": "yash.s@gmail.com" },
+  { "id": 11, "name": "Riya Dave", "rollNo": "25DCE012", "department": "Computer Engineering", "semester": 3, "cgpa": 9.05, "email": "riya.d@gmail.com" },
+  { "id": 12, "name": "Harsh Gandhi", "rollNo": "25DCE018", "department": "Information Technology", "semester": 3, "cgpa": 7.90, "email": "harsh.g@gmail.com" },
+  { "id": 13, "name": "Bhavik Panchal", "rollNo": "25DCE010", "department": "Computer Engineering", "semester": 3, "cgpa": 8.35, "email": "bhavik.p@gmail.com" },
+  { "id": 14, "name": "Tanvi Parmar", "rollNo": "25DCE048", "department": "AI & Data Science", "semester": 3, "cgpa": 8.65, "email": "tanvi.p@gmail.com" },
+  { "id": 15, "name": "Vivek Rana", "rollNo": "25DCE058", "department": "Computer Engineering", "semester": 3, "cgpa": 7.70, "email": "vivek.r@gmail.com" }
+]
