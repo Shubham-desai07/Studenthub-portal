@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "title": "CodeStorm 2026 Annual Hackathon",
+    "category": "Technical",
+    "date": "2026-10-15",
+    "venue": "Auditorium B",
+    "seats": 120,
+    "organizer": "Computer Engineering Dept",
+    "description": "24-hour non-stop coding hackathon on AI, Web, and Cloud solutions."
+  },
+  {
+    "id": 2,
+    "title": "Modern JavaScript ES6+ Workshop",
+    "category": "Workshop",
+    "date": "2026-10-18",
+    "venue": "Lab 202",
+    "seats": 60,
+    "organizer": "Prof. Shah",
+    "description": "Hands-on session covering Fetch API, Promises, and DOM manipulation."
+  },
+  {
+    "id": 3,
+    "title": "Spandan Cultural Evening",
+    "category": "Cultural",
+    "date": "2026-11-05",
+    "venue": "University Open Ground",
+    "seats": 500,
+    "organizer": "Student Activity Council",
+    "description": "Annual music, dance, and theatrical cultural celebrations."
+  },
+  {
+    "id": 4,
+    "title": "Inter-Department Cricket Tournament",
+    "category": "Sports",
+    "date": "2026-11-12",
+    "venue": "Sports Complex",
+    "seats": 200,
+    "organizer": "Sports Committee",
+    "description": "T20 knockout tournament between university engineering departments."
+  },
+  {
+    "id": 5,
+    "title": "Machine Learning & AI Bootcamp",
+    "category": "Technical",
+    "date": "2026-10-25",
+    "venue": "Seminar Hall 1",
+    "seats": 80,
+    "organizer": "Data Science Club",
+    "description": "Introduction to neural networks, computer vision, and model training."
+  },
+  {
+    "id": 6,
+    "title": "Cloud Computing & AWS Certification Talk",
+    "category": "Workshop",
+    "date": "2026-11-02",
+    "venue": "Lab 301",
+    "seats": 70,
+    "organizer": "Industry Relations Cell",
+    "description": "Guest lecture by certified AWS architects on cloud infrastructure."
+  },
+  {
+    "id": 7,
+    "title": "Robotics & IoT Exhibition",
+    "category": "Technical",
+    "date": "2026-11-08",
+    "venue": "Central Foyer",
+    "seats": 150,
+    "organizer": "Robotics Club",
+    "description": "Live demonstration of microcontroller and sensor projects by students."
+  },
+  {
+    "id": 8,
+    "title": "Cybersecurity & Ethical Hacking Webinar",
+    "category": "Workshop",
+    "date": "2026-10-28",
+    "venue": "Virtual / Online",
+    "seats": 300,
+    "organizer": "InfoSec Society",
+    "description": "Web security fundamentals, vulnerability scanning, and defense."
+  },
+  {
+    "id": 9,
+    "title": "Annual Badminton Championship",
+    "category": "Sports",
+    "date": "2026-11-15",
+    "venue": "Indoor Badminton Court",
+    "seats": 100,
+    "organizer": "Sports Committee",
+    "description": "Singles and doubles tournament for male and female students."
+  },
+  {
+    "id": 10,
+    "title": "Photography & Art Exhibition",
+    "category": "Cultural",
+    "date": "2026-11-20",
+    "venue": "Art Gallery Room",
+    "seats": 150,
+    "organizer": "Fine Arts Club",
+    "description": "Showcase of student artwork, sketches, and campus photography."
+  },
+  {
+    "id": 11,
+    "title": "UI/UX Design Masterclass with Figma",
+    "category": "Workshop",
+    "date": "2026-10-30",
+    "venue": "Lab 204",
+    "seats": 50,
+    "organizer": "Design Guild",
+    "description": "Learn wireframing, component design systems, and responsive prototyping."
+  },
+  {
+    "id": 12,
+    "title": "Competitive Programming League Round 1",
+    "category": "Technical",
+    "date": "2026-11-10",
+    "venue": "Lab 101 & 102",
+    "seats": 100,
+    "organizer": "Coding Club",
+    "description": "Solve algorithmic problem statements in C++ and Java with instant grading."
+  },
+  {
+    "id": 13,
+    "title": "Table Tennis Inter-College Cup",
+    "category": "Sports",
+    "date": "2026-11-22",
+    "venue": "Student Recreation Hall",
+    "seats": 80,
+    "organizer": "Sports Committee",
+    "description": "Fast-paced tournament with medals and certificates for winners."
+  },
+  {
+    "id": 14,
+    "title": "Campus Music & Acoustic Night",
+    "category": "Cultural",
+    "date": "2026-11-28",
+    "venue": "Amphitheatre",
+    "seats": 350,
+    "organizer": "Music Society",
+    "description": "Live band performances by university bands and open-mic acoustic sets."
+  },
+  {
+    "id": 15,
+    "title": "Resume Building & Mock Technical Interviews",
+    "category": "Workshop",
+    "date": "2026-12-02",
+    "venue": "Placement Cell Hall",
+    "seats": 90,
+    "organizer": "Training & Placement Cell",
+    "description": "Interactive workshop on resume screening, LinkedIn optimization, and mock HR rounds."
+  }
+]

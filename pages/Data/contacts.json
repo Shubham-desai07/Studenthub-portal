@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "fullName": "Shubham Desai",
+    "email": "shubham@gmail.com",
+    "subject": "Attendance Correction",
+    "message": "Please review my attendance record for Computer Networks lab on Monday.",
+    "submittedAt": "2026-10-02 11:20:00"
+  },
+  {
+    "id": 2,
+    "fullName": "Ananya Joshi",
+    "email": "ananya.j@gmail.com",
+    "subject": "Exam Hall Ticket Query",
+    "message": "Where can I download the signed hall ticket for mid-semester exams?",
+    "submittedAt": "2026-10-03 16:45:12"
+  },
+  {
+    "id": 3,
+    "fullName": "Karan Shah",
+    "email": "karan.s@gmail.com",
+    "subject": "Fee Receipt Duplicate",
+    "message": "Requesting duplicate copy of semester 3 tuition fee receipt.",
+    "submittedAt": "2026-10-04 10:10:30"
+  }
+]

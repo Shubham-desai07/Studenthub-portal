@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "fullName": "Shubham Desai",
+        "email": "shubham.desai@charusat.edu.in",
+        "mobile": "9876543210",
+        "course": "B.Tech Computer Engineering",
+        "year": "2nd Year",
+        "gender": "Male",
+        "registeredAt": "2026-10-01 10:15:20",
+        "ipAddress": "127.0.0.1"
+    },
+    {
+        "id": 2,
+        "fullName": "Aarav Patel",
+        "email": "aarav.patel@gmail.com",
+        "mobile": "9823456781",
+        "course": "B.Tech Computer Engineering",
+        "year": "2nd Year",
+        "gender": "Male",
+        "registeredAt": "2026-10-02 11:30:45",
+        "ipAddress": "127.0.0.1"
+    },
+    {
+        "id": 3,
+        "fullName": "Diya Sharma",
+        "email": "diya.sharma@gmail.com",
+        "mobile": "9712345678",
+        "course": "B.Tech Information Technology",
+        "year": "3rd Year",
+        "gender": "Female",
+        "registeredAt": "2026-10-03 14:22:10",
+        "ipAddress": "127.0.0.1"
+    },
+    {
+        "id": 4,
+        "fullName": "Rohan Mehta",
+        "email": "rohan.mehta@gmail.com",
+        "mobile": "9901234567",
+        "course": "B.Tech AI & Data Science",
+        "year": "1st Year",
+        "gender": "Male",
+        "registeredAt": "2026-10-04 09:45:00",
+        "ipAddress": "127.0.0.1"
+    },
+    {
+        "id": 5,
+        "fullName": "Desai Shubham",
+        "email": "desai07shubham10@gmail.com",
+        "mobile": "9876543102",
+        "course": "B.Tech Computer Engineering",
+        "year": "2nd Year",
+        "gender": "Male",
+        "registeredAt": "2026-10-07 07:32:40",
+        "ipAddress": "::1"
+    }
+]
