@@ -10,7 +10,7 @@
 <body>
 
     <header>
-        <h1><a href="index.html">🎓 StudentHub</a></h1>
+        <h1><a href="index.html">StudentHub</a></h1>
         <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">☰</button>
         <nav>
             <ul id="nav-list">
@@ -23,11 +23,14 @@
                 <li><a href="result.html">Results</a></li>
                 <li><a href="event.html">Events</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="register.php">Register</a></li>
+                <li><a href="view_records.php">Stored Records</a></li>
+                <li><a href="database.php">Database (PDO)</a></li>
                 <li><a href="feedback.html" class="active">Feedback</a></li>
             </ul>
         </nav>
-        <button id="themeBtn" class="btn">🌙 Dark Mode</button>
+        <button id="themeBtn" class="btn"> Dark Mode</button>
     </header>
 
     <main id="main-content" class="container">
@@ -38,7 +41,7 @@
         </nav>
 
         <section class="card" style="max-width: 550px; margin: 20px auto;">
-            <h2>📝 Student Feedback Form</h2>
+            <h2> Student Feedback Form</h2>
             <p>Give your valuable feedback on courses, faculty teaching, and portal usability.</p>
 
             <form onsubmit="event.preventDefault(); alert('Thank you! Your feedback has been submitted anonymously.'); this.reset();" style="margin-top: 15px;">
@@ -56,7 +59,7 @@
                 <div class="form-group">
                     <label>Overall Experience Rating:</label>
                     <div style="display: flex; gap: 15px; margin-top: 5px;">
-                        <label style="font-weight: normal;"><input type="radio" name="rating" value="5" checked> ⭐ Excellent</label>
+                        <label style="font-weight: normal;"><input type="radio" name="rating" value="5" checked> Excellent</label>
                         <label style="font-weight: normal;"><input type="radio" name="rating" value="4"> Good</label>
                         <label style="font-weight: normal;"><input type="radio" name="rating" value="3"> Average</label>
                     </div>
@@ -75,7 +78,7 @@
 
     <footer>
         <p>&copy; 2026 StudentHub Portal | Designed for Semester 3 Web Development Lab Submission</p>
-        <p><a href="about.html">About Us</a> | <a href="contact.html">Contact Support</a> | <a href="faq.html">FAQ</a></p>
+        <p><a href="about.html">About Us</a> | <a href="contact.php">Contact Support</a> | <a href="faq.html">FAQ</a> | <a href="database.php">Practical 8 DB</a></p>
     </footer>
 </body>
 </html>
