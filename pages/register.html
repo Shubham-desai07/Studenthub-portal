@@ -10,7 +10,7 @@
 <body>
 
     <header>
-        <h1><a href="index.html">🎓 StudentHub</a></h1>
+        <h1><a href="index.html"> StudentHub</a></h1>
         <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">☰</button>
         <nav>
             <ul id="nav-list">
@@ -23,12 +23,15 @@
                 <li><a href="result.html">Results</a></li>
                 <li><a href="event.html">Events</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.php">Contact</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="register.html" class="active">Register</a></li>
+                <li><a href="register.php" style="color: #f39c12;">Register (PHP)</a></li>
+                <li><a href="view_records.php">Stored Records</a></li>
+                <li><a href="database.php">Database (PDO)</a></li>
             </ul>
         </nav>
-        <button id="themeBtn" class="btn">🌙 Dark Mode</button>
+        <button id="themeBtn" class="btn"> Dark Mode</button>
     </header>
 
     <main id="main-content" class="container">
@@ -37,6 +40,14 @@
         <nav class="breadcrumbs">
             <a href="index.html">Home</a> &gt; <span>Student Registration</span>
         </nav>
+
+        <!-- Practical 7 & 8 Quick Switch Notice -->
+        <div class="alert alert-info" style="margin-bottom: 15px;">
+            🚀 <strong>Server-Side Processing & Database:</strong> Looking for PHP Form Processing with CSV/JSON storage & CSRF (Practical 7) or MySQL Database (Practical 8)? 
+            <a href="register.php" style="font-weight: bold; color: var(--accent-color); text-decoration: underline;">Switch to PHP Registration (register.php)</a> | 
+            <a href="database.php" style="font-weight: bold; color: #27ae60; text-decoration: underline;">Open MySQL Database (database.php)</a> |
+            <a href="view_records.php" style="font-weight: bold; color: var(--accent-color); text-decoration: underline;">View Stored Records</a>
+        </div>
 
         <section class="card" style="max-width: 550px; margin: 15px auto;">
             <h2 style="text-align: center; margin-bottom: 15px;">Student Registration Form</h2>
@@ -132,7 +143,7 @@
 
     <footer>
         <p>&copy; 2026 StudentHub Portal | Designed for Semester 3 Web Development Lab Submission</p>
-        <p><a href="about.html">About Us</a> | <a href="contact.html">Contact Support</a> | <a href="faq.html">FAQ</a></p>
+        <p><a href="about.html">About Us</a> | <a href="contact.php">Contact Support</a> | <a href="faq.html">FAQ</a> | <a href="database.php">Practical 8 DB</a></p>
     </footer>
 </body>
 </html>
