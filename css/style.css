@@ -1,4 +1,4 @@
-/* ===== StudentHub Portal - style.css ===== */
+/* ===== StudentHub Portal - style.css (Semester 3 Lab Submission) ===== */
 
 /* 1. Theme Color Variables (Light & Dark Mode) */
 :root {
@@ -443,7 +443,272 @@ input.valid, select.valid {
     color: var(--error-color);
 }
 
-/* 11. Footer */
+/* 11. Practical 7 Styles: Server-Side Validation Alerts, Badges & Tables */
+.alert {
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 15px 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+body.dark .alert-success {
+    background-color: #1b4332;
+    color: #d8f3dc;
+    border-color: #2d6a4f;
+}
+
+body.dark .alert-danger {
+    background-color: #491217;
+    color: #f8d7da;
+    border-color: #721c24;
+}
+
+body.dark .alert-info {
+    background-color: #0c3547;
+    color: #d1ecf1;
+    border-color: #1b4965;
+}
+
+.field-error {
+    color: var(--error-color);
+    font-size: 0.8rem;
+    margin-top: 3px;
+    font-weight: 500;
+}
+
+.badge-csrf {
+    background-color: #8e44ad;
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.tab-controls {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+.json-viewer {
+    background-color: #1e272e;
+    color: #2ecc71;
+    padding: 15px;
+    border-radius: 6px;
+    font-family: Consolas, Monaco, "Courier New", monospace;
+    font-size: 0.85rem;
+    overflow-x: auto;
+    max-height: 400px;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+/* 12. Practical 8 Styles: MySQL Schema, ER Model & PDO Connectivity */
+.badge-db-connected {
+    background-color: #27ae60;
+    color: #ffffff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.badge-db-offline {
+    background-color: #e74c3c;
+    color: #ffffff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.er-diagram-container {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.er-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.er-card {
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.er-card-header {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 14px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.er-attr-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.er-attr-item {
+    padding: 8px 14px;
+    border-bottom: 1px solid var(--border-color);
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.er-attr-item:last-child {
+    border-bottom: none;
+}
+
+.er-attr-item:nth-child(even) {
+    background-color: rgba(0,0,0,0.02);
+}
+
+body.dark .er-attr-item:nth-child(even) {
+    background-color: rgba(255,255,255,0.03);
+}
+
+.er-badge-pk {
+    background-color: #f39c12;
+    color: #ffffff;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.er-badge-fk {
+    background-color: #9b59b6;
+    color: #ffffff;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.code-viewer {
+    background-color: #1e272e;
+    color: #f5f6fa;
+    padding: 15px;
+    border-radius: 6px;
+    font-family: Consolas, Monaco, "Courier New", monospace;
+    font-size: 0.88rem;
+    overflow-x: auto;
+    max-height: 420px;
+    white-space: pre-wrap;
+    line-height: 1.5;
+}
+
+.sql-keyword { color: #e74c3c; font-weight: bold; }
+.sql-type { color: #3498db; }
+.sql-string { color: #2ecc71; }
+.sql-comment { color: #7f8c8d; font-style: italic; }
+
+.viva-box {
+    background-color: var(--card-bg);
+    border-left: 4px solid var(--accent-color);
+    padding: 14px 18px;
+    margin-bottom: 15px;
+    border-radius: 0 6px 6px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.viva-question {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+body.dark .viva-question {
+    color: #3498db;
+}
+
+.security-compare {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.sec-box-vulnerable {
+    border: 1px solid #e74c3c;
+    background-color: rgba(231, 76, 60, 0.05);
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.sec-box-secure {
+    border: 1px solid #27ae60;
+    background-color: rgba(39, 174, 96, 0.05);
+    border-radius: 6px;
+    padding: 15px;
+}
+
+/* 13. Footer */
 footer {
     text-align: center;
     padding: 18px;
@@ -454,7 +719,7 @@ footer {
 }
 footer a { color: #3498db; }
 
-/* 11. Mobile Responsive (Practical 3) */
+/* 14. Mobile Responsive (Practical 3) */
 @media (max-width: 768px) {
     .hamburger-btn { display: block; }
     nav ul {
@@ -465,4 +730,6 @@ footer a { color: #3498db; }
     }
     nav ul.show { display: flex; }
     .grid { grid-template-columns: 1fr; }
+    .er-grid { grid-template-columns: 1fr; }
+    .security-compare { grid-template-columns: 1fr; }
 }
