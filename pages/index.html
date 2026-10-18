@@ -11,13 +11,13 @@
 
     <!-- Notification Banner (Practical 4) -->
     <div class="banner" id="notification-banner">
-        <span>📢 Notice: Mid-Semester exam schedule is now published. Check timetable!</span>
+        <span> Notice: Mid-Semester exam schedule is now published. Check timetable!</span>
         <button id="closeBanner" aria-label="Close notification">&times;</button>
     </div>
 
     <!-- Header & Navigation (Practical 2 & 3) -->
     <header>
-        <h1><a href="index.html">🎓 StudentHub</a></h1>
+        <h1><a href="index.html"> StudentHub</a></h1>
         <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">☰</button>
         <nav>
             <ul id="nav-list">
@@ -30,12 +30,14 @@
                 <li><a href="result.html">Results</a></li>
                 <li><a href="event.html">Events</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.php">Contact</a></li>
                 <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
+                <li><a href="register.php">Register (PHP)</a></li>
+                <li><a href="view_records.php">Stored Records</a></li>
+                <li><a href="practical8.php">Practical 8</a></li>
             </ul>
         </nav>
-        <button id="themeBtn" class="btn">🌙 Dark Mode</button>
+        <button id="themeBtn" class="btn"> Dark Mode</button>
     </header>
 
     <!-- Main Content -->
@@ -45,9 +47,11 @@
         <section class="card" style="text-align: center; margin-top: 10px;">
             <h2>Welcome to StudentHub Portal</h2>
             <p>A unified academic management portal for Students, Faculty, and Admin staff.</p>
-            <div style="margin-top: 15px;">
+            <div style="margin-top: 15px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
                 <a href="login.html" class="btn">Login to Portal</a>
-                <a href="register.html" class="btn btn-secondary">New Registration</a>
+                <a href="register.php" class="btn btn-secondary">Student Registration (PHP)</a>
+                <a href="view_records.php" class="btn" style="background-color: #8e44ad;">📂 Stored Records (CSV/JSON)</a>
+                <a href="practical8.php" class="btn" style="background-color: #27ae60;">🗄️ MySQL Database (Practical 8)</a>
             </div>
         </section>
 
@@ -55,22 +59,22 @@
         <section class="slider" aria-label="Highlights">
             <button class="slider-btn prev" aria-label="Previous">&lt;</button>
             <div class="slide active">
-                <h3>📊 Track Real-time Attendance</h3>
+                <h3> Track Real-time Attendance</h3>
                 <p>Check subject-wise attendance and maintain minimum 80% criteria.</p>
             </div>
             <div class="slide">
-                <h3>📝 Online Assignment Submissions</h3>
+                <h3> Online Assignment Submissions</h3>
                 <p>Submit lab practicals and homework before deadline dates.</p>
             </div>
             <div class="slide">
-                <h3>📜 Instant Semester Grade Sheets</h3>
+                <h3> Instant Semester Grade Sheets</h3>
                 <p>View marks, grade points, and calculate your SGPA/CGPA easily.</p>
             </div>
             <button class="slider-btn next" aria-label="Next">&gt;</button>
         </section>
 
-        <!-- User Roles Grid (Practical 1 & 3) -->
-        <h3 style="margin-top: 20px;">👥 User Roles & Portals</h3>
+        <!-- User Roles Grid (Practical 1 & 3 & 7 & 8) -->
+        <h3 style="margin-top: 20px;"> User Roles & Portals</h3>
         <section class="grid">
             <article class="card">
                 <h3>Student Panel</h3>
@@ -85,14 +89,28 @@
             </article>
 
             <article class="card">
-                <h3>Admin Panel</h3>
-                <p>Manage student registrations, faculty allocations, and post campus notices.</p>
-                <a href="contact.html" class="btn">Helpdesk</a>
+                <h3>Admin & Records Panel</h3>
+                <p>Process registrations, manage helpdesk queries, and inspect CSV/JSON data files.</p>
+                <a href="view_records.php" class="btn">View Stored Records</a>
+            </article>
+
+            <article class="card" style="border-left: 4px solid #27ae60;">
+                <h3>Web Dev Frameworks Lab (Practicals 8 to 14)</h3>
+                <p>Complete backend implementation with MySQL, Sessions, CRUD, File Upload, JSON API, and RBAC:</p>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px;">
+                    <a href="practical8.php" class="btn" style="background-color: #27ae60; font-size: 0.8rem; padding: 5px 10px;">P8: DB Schema</a>
+                    <a href="practical9.php" class="btn" style="background-color: #2980b9; font-size: 0.8rem; padding: 5px 10px;">P9: Registration</a>
+                    <a href="practical10.php" class="btn" style="background-color: #8e44ad; font-size: 0.8rem; padding: 5px 10px;">P10: Login &amp; RBAC</a>
+                    <a href="practical11.php" class="btn" style="background-color: #d35400; font-size: 0.8rem; padding: 5px 10px;">P11: Student CRUD</a>
+                    <a href="practical12.php" class="btn" style="background-color: #16a085; font-size: 0.8rem; padding: 5px 10px;">P12: Event Upload</a>
+                    <a href="practical13.php" class="btn" style="background-color: #c0392b; font-size: 0.8rem; padding: 5px 10px;">P13: Fetch API</a>
+                    <a href="practical14.php" class="btn" style="background-color: #2c3e50; font-size: 0.8rem; padding: 5px 10px;">P14: Admin Dashboard</a>
+                </div>
             </article>
         </section>
 
         <!-- Quick Stats Grid (Practical 3) -->
-        <h3 style="margin-top: 20px;">📈 Portal Overview</h3>
+        <h3 style="margin-top: 20px;">Portal Overview</h3>
         <section class="grid">
             <div class="card stat-box">
                 <div class="stat-number">1,400+</div>
@@ -117,7 +135,7 @@
     <!-- Footer (Practical 2) -->
     <footer>
         <p>&copy; 2026 StudentHub Portal | Designed for Semester 3 Web Development Lab Submission</p>
-        <p><a href="about.html">About Us</a> | <a href="contact.html">Contact Support</a> | <a href="faq.html">FAQ</a></p>
+        <p><a href="about.html">About Us</a> | <a href="contact.php">Contact Support</a> | <a href="faq.html">FAQ</a> | <a href="database.php">Practical 8 (DB)</a></p>
     </footer>
 </body>
 </html>
